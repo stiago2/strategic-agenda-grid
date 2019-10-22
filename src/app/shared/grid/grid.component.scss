@@ -1,7 +1,22 @@
-table {
-    width: 100%;
-}
+@import 'styles/styles-variables.scss';
 
-th.mat-sort-header-sorted {
-    color: black;
+.grid-container {
+    position: relative;
+    .spinner-container {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+    }
+
+    .mat-spinner {
+        position: fixed;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th.mat-sort-header-sorted {
+        color: $header-text-color;
+    }
 }

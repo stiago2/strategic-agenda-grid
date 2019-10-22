@@ -6,17 +6,26 @@ import { AppComponent } from './app.component';
 import { CoreModule } from '@core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { BackendInterceptor } from './backend/backend.interceptor';
 
 @NgModule({
     declarations: [AppComponent],
     imports: [
         BrowserModule,
+        HttpClientModule,
         CoreModule,
         DashboardModule,
         AppRoutingModule,
         BrowserAnimationsModule
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: BackendInterceptor,
+            multi: true
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

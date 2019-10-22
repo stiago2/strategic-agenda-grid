@@ -1,7 +1,10 @@
-<mat-form-field>
-    <input
-        matInput
-        (keyup)="filter($event.target.value)"
-        placeholder="Filter"
-    />
-</mat-form-field>
+<div class="input-container">
+    <mat-form-field>
+        <input
+            matInput
+            placeholder="Filter by Name or Email"
+            [value]="filterValue"
+            [formControl]="filterValueControl"
+        />
+    </mat-form-field>
+</div>

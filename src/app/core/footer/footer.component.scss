@@ -2,8 +2,14 @@
 
 footer {
     border-top: 1px solid $border-color;
-    ul li {
-        display: inline-block;
-        margin: 10px;
+    background-color: $footer-background-color;
+    ul {
+        display: flex;
+        padding: 20px 0;
+        justify-content: center;
+        li {
+            margin: 0 20px;
+            list-style-type: none;
+        }
     }
 }

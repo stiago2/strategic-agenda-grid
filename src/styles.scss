@@ -5,3 +5,32 @@
 @import '~bootstrap/scss/bootstrap-grid';
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import './styles/styles-reset';
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9px;
+    outline: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
