@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    <div class="grid-container">
+        <sa-filter (applyFilter)="applyFilter($event)"></sa-filter>
+        <sa-grid [users]="users" #child></sa-grid>
+    </div>
+</div>

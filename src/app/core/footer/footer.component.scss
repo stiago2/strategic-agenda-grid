@@ -1,0 +1,9 @@
+@import 'styles/styles-variables.scss';
+
+footer {
+    border-top: 1px solid $border-color;
+    ul li {
+        display: inline-block;
+        margin: 10px;
+    }
+}
