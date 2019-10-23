@@ -11,6 +11,28 @@ export class DashboardComponent {
     customers: Customer[];
     loading = false;
 
+    config = {
+        columns: [
+            {
+                text: 'Customer ID',
+                data: 'id'
+            },
+            {
+                text: 'Customer Name',
+                data: 'name'
+            },
+            {
+                text: 'Customer Email',
+                data: 'email'
+            },
+            {
+                text: 'Customer Phone Number',
+                data: 'phone'
+            }
+        ],
+        displayedColumns: ['id', 'name', 'email', 'phone']
+    };
+
     constructor(private dashboardService: DashboardService) {
         this.getUsers('');
     }

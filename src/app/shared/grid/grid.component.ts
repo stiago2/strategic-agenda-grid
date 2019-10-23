@@ -12,6 +12,8 @@ import { Customer } from '@core/Models/customer.model';
 export class GridComponent {
     displayedColumns: string[] = ['id', 'name', 'email', 'phone'];
     dataSource: MatTableDataSource<Customer>;
+
+    @Input() config;
     @Input() loading: boolean;
     @Input()
     set customers(customers: Customer[]) {
