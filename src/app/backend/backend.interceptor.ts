@@ -76,17 +76,17 @@ function createNewUser(id: number): Customer {
         'Thomas',
         'Elizabeth'
     ];
-    const name =
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-        ' ' +
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-        '.';
+    // const name =
+    //     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
+    //     ' ' +
+    //     NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
+    //     '.';
 
-    const email = `${NAMES[
-        Math.round(Math.random() * (NAMES.length - 1))
-    ].toLowerCase()}${NAMES[
-        Math.round(Math.random() * (NAMES.length - 1))
-    ].charAt(0)}@gmail.com`;
+    const name = `${
+        NAMES[Math.round(Math.random() * (NAMES.length - 1))]
+    } ${NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0)}`;
+
+    const email = `${name.replace(' ', '').toLowerCase()}@gmail.com`;
 
     return {
         id: id.toString(),
