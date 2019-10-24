@@ -21,6 +21,10 @@
             ></tr>
         </table>
 
+        <mat-card *ngIf="dataSource?.data.length === 0 && !loading"
+            >No records were found!</mat-card
+        >
+
         <mat-paginator
             [length]="customers?.length"
             [pageSize]="15"

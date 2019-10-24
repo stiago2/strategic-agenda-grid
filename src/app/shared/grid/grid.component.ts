@@ -17,11 +17,13 @@ export class GridComponent {
     @Input() loading: boolean;
     @Input()
     set customers(customers: Customer[]) {
-        this.dataSource = new MatTableDataSource(customers);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-        if (this.dataSource.paginator) {
-            this.dataSource.paginator.firstPage();
+        if (customers) {
+            this.dataSource = new MatTableDataSource(customers);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+            if (this.dataSource.paginator) {
+                this.dataSource.paginator.firstPage();
+            }
         }
     }
 

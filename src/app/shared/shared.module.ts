@@ -9,6 +9,7 @@ import { FilterComponent } from './filter/filter.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { GridComponent } from './grid/grid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     declarations: [GridComponent, FilterComponent],
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatFormFieldModule,
         MatInputModule,
         MatSortModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatCardModule
     ],
     exports: [CommonModule, GridComponent, FilterComponent]
 })
